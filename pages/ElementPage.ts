@@ -16,6 +16,21 @@ export class ElementPage {
     //Check Box Elements
     readonly checkBox: Locator;
 
+    //Radio Button Elements
+    readonly radioButton: Locator;
+    readonly radioButtonMessage: Locator;
+    readonly ImpressiveRadioButton: Locator;
+
+    //Buttons Elements
+    readonly clickMeButton: Locator;
+    readonly clickMeButtonMessage: Locator;
+
+    readonly rightClickMeButton: Locator;
+    readonly rightClickMeButtonMessage: Locator;
+
+    readonly doubleClickMeButton: Locator;
+    readonly doubleClickMeButtonMessage: Locator;
+
     constructor(page:Page){
         this.page = page;
         this.textBoxOption = page.locator('text=Text Box');
@@ -30,6 +45,22 @@ export class ElementPage {
 
         //Check Box Elements
         this.checkBox = page.locator('.rct-checkbox');
+
+        //Radio Button Elements
+        this.radioButton = page.locator('label[for="yesRadio"]');
+        this.radioButtonMessage = page.locator('text=You have Selected');
+        this.ImpressiveRadioButton = page.locator('label[for="impressiveRadio"]');
+
+        //Buttons Elements
+        //this.clickMeButton use getByRole due to its id is variable and there are several buttons with the same text 
+        this.clickMeButton = page.getByRole('button', { name: 'Click Me', exact: true });
+        this.clickMeButtonMessage = page.locator('#dynamicClickMessage');
+
+        this.rightClickMeButton = page.locator('#rightClickBtn');
+        this.rightClickMeButtonMessage = page.locator('#rightClickMessage');
+
+        this.doubleClickMeButton = page.locator('#doubleClickBtn');
+        this.doubleClickMeButtonMessage = page.locator('#doubleClickMessage');
 
     }
 
