@@ -13,6 +13,18 @@ export class ElementPage {
     readonly uploadDownloadOption: Locator;
     readonly dynamicPropertiesOption: Locator;
 
+    //Check Text Box Elements
+    readonly fullNameBox: Locator;
+    readonly emailBox: Locator;
+    readonly currentAddressBox: Locator;
+    readonly permanentAddressBox: Locator;
+    readonly submitButton: Locator;
+
+    readonly nameMessage: Locator;
+    readonly emailMessage: Locator;
+    readonly currentAddressMessage: Locator;
+    readonly permanentAddressMessage: Locator;
+
     //Check Box Elements
     readonly checkBox: Locator;
 
@@ -43,6 +55,18 @@ export class ElementPage {
         this.uploadDownloadOption = page.locator('text=Upload and Download');
         this.dynamicPropertiesOption = page.locator('text=Dynamic Properties');
 
+        //Check Text Box Elements
+        this.fullNameBox = page.locator('#userName');
+        this.emailBox = page.locator('#userEmail');
+        this.currentAddressBox = page.locator('textarea#currentAddress');
+        this.permanentAddressBox = page.locator('textarea#permanentAddress');
+        this.submitButton = page.locator('#submit');
+
+        this.nameMessage = page.locator('#name');
+        this.emailMessage = page.locator('#email');
+        this.currentAddressMessage = page.locator('p#currentAddress');
+        this.permanentAddressMessage = page.locator('p#permanentAddress');
+
         //Check Box Elements
         this.checkBox = page.locator('.rct-checkbox');
 
@@ -65,7 +89,7 @@ export class ElementPage {
     }
 
     async goto() {
-        await this.page.goto(BASE_URL+'/elements');
+        await this.page.goto(BASE_URL+'/elements', {timeout: 60000});
     }
 
 }
