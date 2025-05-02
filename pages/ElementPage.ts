@@ -43,6 +43,19 @@ export class ElementPage {
     readonly doubleClickMeButton: Locator;
     readonly doubleClickMeButtonMessage: Locator;
 
+    //Links Elements
+    readonly homeLink: Locator;
+    readonly homeNDHJjLink: Locator;
+
+    //Broken Links Elements
+    readonly validImageLink: Locator;
+    readonly brokenImageLink: Locator;
+    readonly validLink: Locator;
+    readonly brokenLink: Locator;
+
+
+
+
     constructor(page:Page){
         this.page = page;
         this.textBoxOption = page.locator('text=Text Box');
@@ -85,6 +98,12 @@ export class ElementPage {
 
         this.doubleClickMeButton = page.locator('#doubleClickBtn');
         this.doubleClickMeButtonMessage = page.locator('#doubleClickMessage');
+
+        //Broken Links Elements
+        this.validImageLink = page.locator('img[src="/images/Toolsqa.jpg"]').first();
+        this.brokenImageLink = page.locator('img[src="/images/Toolsqa_1.jpg"]');
+        this.validLink = page.locator('text=Click Here for Valid Link');
+        this.brokenLink = page.locator('text=Click Here for Broken Link');
 
     }
 
