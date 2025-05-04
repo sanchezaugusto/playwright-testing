@@ -19,6 +19,7 @@ export class FormPage {
     readonly successMessage: Locator;
 
     //modal elements
+    readonly modalContent: Locator;
     readonly modalTitle: Locator;
     readonly closeButton: Locator;
     readonly studentName: Locator;
@@ -34,6 +35,7 @@ export class FormPage {
         this.lastNameBox = page.locator('#lastName');
         this.emailBox = page.locator('#userEmail');
         this.genderCheckBox = page.locator('label[for="gender-radio-1"]'); //Male
+        this.dateOfBirthBox = page.locator('#dateOfBirthInput');
         this.mobileNumberBox = page.locator('#userNumber');
 
         this.sujectsBox = page.locator('#subjectsInput');
@@ -43,6 +45,7 @@ export class FormPage {
         this.submitButton = page.locator('#submit');
 
         //modal elements
+        this.modalContent = page.locator('.modal-content');
         this.modalTitle = page.locator('.modal-title.h4');
         this.studentName = page.locator('tr:has-text("Student Name") td:nth-child(2)');
         this.studentEmail = page.locator('tr:has-text("Student Email") td:nth-child(2)');
@@ -56,6 +59,7 @@ export class FormPage {
     }
 
     async goto() {
+        await this.page.setViewportSize({ width: 1920, height: 833 });
         await this.page.goto(BASE_URL+'/automation-practice-form', {timeout: 60000});
     }
 
@@ -64,6 +68,7 @@ export class FormPage {
         await this.lastNameBox.fill('doe');
         await this.emailBox.fill('jhon123@mail.com');
         await this.genderCheckBox.click();
+        await this.dateOfBirthBox.fill('03 May 2025')
         await this.mobileNumberBox.fill('1234567891');
 
         await this.submitButton.click();
