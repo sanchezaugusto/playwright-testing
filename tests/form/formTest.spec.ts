@@ -16,10 +16,10 @@ test.describe('form test',async()=>{
         await expect(formPage.dob).toHaveText('03 May,2025');
     
 
-        // await expect(formPage.closeButton).toBeVisible();
-        // await (formPage.closeButton).click();
+        await expect(formPage.closeButton).toBeVisible();
+        await (formPage.closeButton).click({force: true});
     
-        // // Verify the modal is closed
-        // await expect(formPage.modalTitle).not.toBeVisible();
+        // Verify the modal is closed
+        //await expect(formPage.modalTitle).not.toBeVisible();
     })
 })
