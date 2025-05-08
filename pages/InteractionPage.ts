@@ -10,6 +10,12 @@ export class InteractionPage {
     readonly dragableOption: Locator;
 
     //Draggable Elements
+    //Options
+    readonly simpleOption: Locator;
+    readonly axisOption: Locator;
+    readonly containerOption: Locator;
+    readonly cursorOption: Locator;
+    //elements
     readonly dragBox: Locator;
 
     constructor(page: Page){
@@ -21,6 +27,12 @@ export class InteractionPage {
         this.dragableOption = page.locator('text=Dragabble');
 
         //Draggable Elements
+        //Options
+        this.simpleOption = page.locator('#draggableExample-tab-simple');
+        this.axisOption = page.locator('#draggableExample-tab-axisRestriction');
+        this.containerOption = page.locator('#draggableExample-tab-containerRestriction');
+        this.cursorOption = page.locator('#draggableExample-tab-cursorStyle');
+        //elements
         this.dragBox = page.locator('#dragBox');
     }
 
