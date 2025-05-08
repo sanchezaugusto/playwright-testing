@@ -9,13 +9,19 @@ export class InteractionPage {
     readonly droppableOption: Locator;
     readonly dragableOption: Locator;
 
+    //Draggable Elements
+    readonly dragBox: Locator;
+
     constructor(page: Page){
         this.page = page;
         this.sortableOption = page.locator('text=Sortable');
         this.selectableOption = page.locator('text=Selectable');
         this.ResizableOption = page.locator('text=Resizable');
         this.droppableOption = page.locator('text=Droppable');
-        this.dragableOption = page.locator('text=Draggable');
+        this.dragableOption = page.locator('text=Dragabble');
+
+        //Draggable Elements
+        this.dragBox = page.locator('#dragBox');
     }
 
     async goto() {
