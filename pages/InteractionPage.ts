@@ -17,8 +17,18 @@ export class InteractionPage {
     readonly cursorOption: Locator;
     //elements
     readonly dragBox: Locator;
+    
+    //Axis Restricted
     readonly dragBoxX: Locator;
     readonly dragBoxY: Locator;
+
+    //Container Restricted
+
+
+    //Cursor Style
+    readonly center: Locator;
+    readonly topLeft: Locator;
+    readonly bottom: Locator;
 
     constructor(page: Page){
         this.page = page;
@@ -36,8 +46,18 @@ export class InteractionPage {
         this.cursorOption = page.locator('#draggableExample-tab-cursorStyle');
         //elements
         this.dragBox = page.locator('#dragBox');
+
+        //Axis Restricted
         this.dragBoxX = page.locator('#restrictedX');
         this.dragBoxY = page.locator('#restrictedY');
+
+        //Container Restricted
+
+
+        //Cursor Style
+        this.center = page.locator('#cursorCenter');
+        this.topLeft = page.locator('#cursorTopLeft');
+        this.bottom = page.locator('#cursorBottom');
     }
 
     async goto() {
