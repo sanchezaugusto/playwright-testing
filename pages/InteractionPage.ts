@@ -15,7 +15,8 @@ export class InteractionPage {
     readonly axisOption: Locator;
     readonly containerOption: Locator;
     readonly cursorOption: Locator;
-    //elements
+    
+    //Simple
     readonly dragBox: Locator;
     
     //Axis Restricted
@@ -23,7 +24,9 @@ export class InteractionPage {
     readonly dragBoxY: Locator;
 
     //Container Restricted
-
+    readonly element1: Locator;
+    readonly element2: Locator;
+    readonly containerWrapper: Locator;
 
     //Cursor Style
     readonly center: Locator;
@@ -44,7 +47,8 @@ export class InteractionPage {
         this.axisOption = page.locator('#draggableExample-tab-axisRestriction');
         this.containerOption = page.locator('#draggableExample-tab-containerRestriction');
         this.cursorOption = page.locator('#draggableExample-tab-cursorStyle');
-        //elements
+        
+        //Simple
         this.dragBox = page.locator('#dragBox');
 
         //Axis Restricted
@@ -52,6 +56,9 @@ export class InteractionPage {
         this.dragBoxY = page.locator('#restrictedY');
 
         //Container Restricted
+        this.element1 = page.locator("text=I'm contained within the box");
+        this.element2 = page.locator("text=I'm contained within my parent");
+        this.containerWrapper = page.locator('#containmentWrapper');
 
 
         //Cursor Style
