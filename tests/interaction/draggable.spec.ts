@@ -24,4 +24,29 @@ test.describe('dragabble test', async () => {
         expect(newPosition.x).toBeCloseTo(targetX, 1);
         expect(newPosition.y).toBeCloseTo(targetY, 1);
     })
+
+    test('dragabble X and Y should to work', async ({ page }) => {
+        const interactionPage = new InteractionPage(page);
+        await interactionPage.goto();
+        await interactionPage.dragableOption.click();
+        await interactionPage.axisOption.click();
+
+        const initialPosition = await interactionPage.dragBoxX.boundingBox();
+        if (!initialPosition) throw new Error('dragBox bounding box not found');
+        const targetX = initialPosition.x + 100;
+        const targetY = initialPosition.y + 30;
+
+        // Perform the drag using the mouse API
+        await page.waitForTimeout(5000);
+        await page.mouse.move(initialPosition.x, initialPosition.y);
+        await page.mouse.down();
+        await page.mouse.move(targetX, targetY);
+        await page.mouse.up();
+        await page.waitForTimeout(5000);
+        const newPosition = await interactionPage.dragBox.boundingBox();
+        if(!newPosition) throw new Error('Element not found');
+
+        expect(newPosition.x).toBeCloseTo(targetX, 1);
+        expect(newPosition.y).toBeCloseTo(initialPosition.y, 1);
+    })
 })
