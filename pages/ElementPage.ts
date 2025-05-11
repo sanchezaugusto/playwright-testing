@@ -61,6 +61,19 @@ export class ElementPage {
     readonly doubleClickMeButton: Locator;
     readonly doubleClickMeButtonMessage: Locator;
 
+    //Web Table Elements
+    readonly addNewRecordButton: Locator;
+    readonly firstNameBox: Locator;
+    readonly lastNameBox: Locator;
+    readonly userEmailBox: Locator;
+    readonly ageBox: Locator;
+    readonly salaryBox: Locator;
+    readonly departmentBox: Locator;
+    readonly submitButtonWebTable: Locator;
+    readonly closeButton: Locator;
+    readonly searchBox: Locator;
+    
+
     //Links Elements
     readonly homeLink: Locator;
     readonly homeNDHJjLink: Locator;
@@ -135,6 +148,18 @@ export class ElementPage {
 
         this.doubleClickMeButton = page.locator('#doubleClickBtn');
         this.doubleClickMeButtonMessage = page.locator('#doubleClickMessage');
+
+        //Web Table Elements
+        this.addNewRecordButton = page.locator('#addNewRecordButton');
+        this.firstNameBox = page.locator('#firstName');
+        this.lastNameBox = page.locator('#lastName');
+        this.userEmailBox = page.locator('#userEmail');
+        this.ageBox = page.locator('#age');
+        this.salaryBox = page.locator('#salary');
+        this.departmentBox = page.locator('#department');
+        this.submitButtonWebTable = page.locator('#submit');
+        this.closeButton = page.locator('#closeLargeModal');
+        this.searchBox = page.locator('#searchBox');
 
         //Broken Links Elements
         this.validImageLink = page.locator('img[src="/images/Toolsqa.jpg"]').first();
