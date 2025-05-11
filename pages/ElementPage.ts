@@ -27,6 +27,24 @@ export class ElementPage {
 
     //Check Box Elements
     readonly checkBox: Locator;
+    readonly homeCheck: Locator;
+    readonly desktopCheck: Locator;
+    readonly notesCheck: Locator;
+    readonly commandsCheck: Locator;
+    readonly documentsCheck: Locator;
+    readonly workspaceCheck: Locator;
+    readonly reactCheck: Locator;
+    readonly angularCheck: Locator;
+    readonly veuCheck: Locator;
+    readonly officeCheck: Locator;
+    readonly publicCheck: Locator;
+    readonly privateCheck: Locator;
+    readonly classifiedCheck: Locator;
+    readonly generalCheck: Locator;
+    readonly downloadsCheck: Locator;
+    readonly wordCheck: Locator;
+    readonly excelCheck: Locator;
+
 
     //Radio Button Elements
     readonly radioButton: Locator;
@@ -58,6 +76,8 @@ export class ElementPage {
 
     constructor(page:Page){
         this.page = page;
+
+        //
         this.textBoxOption = page.locator('text=Text Box');
         this.checkBoxOption = page.locator('text=Check Box');
         this.radioButtonOption = page.locator('text=Radio Button');
@@ -82,6 +102,23 @@ export class ElementPage {
 
         //Check Box Elements
         this.checkBox = page.locator('.rct-checkbox');
+        this.homeCheck = page.locator('#tree-node-home');
+        this.desktopCheck = page.locator('#tree-node-desktop');
+        this.notesCheck = page.locator('#tree-node-notes');
+        this.commandsCheck = page.locator('#tree-node-commands');
+        this.documentsCheck = page.locator('#tree-node-documents');
+        this.workspaceCheck = page.locator('#tree-node-workspace');
+        this.reactCheck = page.locator('#tree-node-react');
+        this.angularCheck = page.locator('#tree-node-angular');
+        this.veuCheck = page.locator('#tree-node-veu');
+        this.officeCheck = page.locator('#tree-node-office');
+        this.publicCheck = page.locator('#tree-node-public');
+        this.privateCheck = page.locator('#tree-node-private');
+        this.classifiedCheck = page.locator('#tree-node-classified');
+        this.generalCheck = page.locator('#tree-node-general');
+        this.downloadsCheck = page.locator('#tree-node-downloads');
+        this.wordCheck = page.locator('#tree-node-word');
+        this.excelCheck = page.locator('#tree-node-excel');
 
         //Radio Button Elements
         this.radioButton = page.locator('label[for="yesRadio"]');
