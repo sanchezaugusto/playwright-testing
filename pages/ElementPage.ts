@@ -3,6 +3,8 @@ import { BASE_URL } from '../utils/config';
 
 export class ElementPage {
     readonly page: Page;
+
+    //Element Page Options
     readonly textBoxOption: Locator;
     readonly checkBoxOption: Locator;
     readonly radioButtonOption: Locator;
@@ -54,10 +56,8 @@ export class ElementPage {
     //Buttons Elements
     readonly clickMeButton: Locator;
     readonly clickMeButtonMessage: Locator;
-
     readonly rightClickMeButton: Locator;
     readonly rightClickMeButtonMessage: Locator;
-
     readonly doubleClickMeButton: Locator;
     readonly doubleClickMeButtonMessage: Locator;
 
@@ -90,7 +90,7 @@ export class ElementPage {
     constructor(page:Page){
         this.page = page;
 
-        //
+        //Element Page Options
         this.textBoxOption = page.locator('text=Text Box');
         this.checkBoxOption = page.locator('text=Check Box');
         this.radioButtonOption = page.locator('text=Radio Button');
