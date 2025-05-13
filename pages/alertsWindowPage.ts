@@ -10,6 +10,16 @@ export class AlertsWindowPage {
     readonly nestedFramesOption: Locator;
     readonly modalDialogsOption: Locator;
 
+    //Browser Windows Elements
+    readonly newTabOption: Locator;
+    readonly newWindowOption: Locator;
+    readonly messageWindowOption: Locator;
+
+    //Alerts Elements
+    readonly alertBoxOption: Locator;
+    readonly confirmBoxOption: Locator;
+    readonly promptBoxOption: Locator;
+
 
     constructor(page: Page) {
         this.page = page;
@@ -17,6 +27,16 @@ export class AlertsWindowPage {
         this.alertsOption = page.locator('text=Alerts');
         this.nestedFramesOption = page.locator('text=Nested Frames');
         this.modalDialogsOption = page.locator('text=Modal Dialogs');
+
+        //Browser Windows Elements
+        this.newTabOption = page.locator('text=New Tab');
+        this.newWindowOption = page.locator('text=New Window');
+        this.messageWindowOption = page.locator('text=Message Window');
+
+        //Alerts Elements
+        this.alertBoxOption = page.locator('text=Alert Box');
+        this.confirmBoxOption = page.locator('text=Confirm Box');
+        this.promptBoxOption = page.locator('text=Prompt Box');
         
     }
 
