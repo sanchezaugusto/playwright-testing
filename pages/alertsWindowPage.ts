@@ -20,6 +20,14 @@ export class AlertsWindowPage {
     readonly confirmBoxOption: Locator;
     readonly promptBoxOption: Locator;
 
+    //Frames Elements
+    readonly iframe1: Locator;
+    readonly iframe2: Locator;
+
+    //Nested Frames Elements
+    readonly parentFrame: Locator;
+    readonly childFrame: Locator;
+
 
     constructor(page: Page) {
         this.page = page;
@@ -37,7 +45,14 @@ export class AlertsWindowPage {
         this.alertBoxOption = page.locator('text=Alert Box');
         this.confirmBoxOption = page.locator('text=Confirm Box');
         this.promptBoxOption = page.locator('text=Prompt Box');
+
+        //Frames Elements
+        this.iframe1 = page.frameLocator('iframe[name="iframe1"]').locator('text=This is a sample page');
+        this.iframe2 = page.frameLocator('iframe[name="iframe2"]').locator('text=This is a sample page');
         
+        //Nested Frames Elements
+        this.parentFrame = page.frameLocator('iframe[name="frame1"]').locator('text=Parent frame');
+        this.childFrame = page.frameLocator('iframe[name="frame2"]').locator('text=Child Iframe');
     }
 
     goto() {
