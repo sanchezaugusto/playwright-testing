@@ -28,6 +28,13 @@ export class AlertsWindowPage {
     readonly parentFrame: Locator;
     readonly childFrame: Locator;
 
+    //Modal Dialogs Elements
+    readonly modalTitle: Locator;
+    readonly smallModal: Locator;
+    readonly largeModal: Locator;
+    readonly closeSmallModalButton: Locator;
+    readonly closeLargeModalButton: Locator;
+
 
     constructor(page: Page) {
         this.page = page;
@@ -53,6 +60,13 @@ export class AlertsWindowPage {
         //Nested Frames Elements
         this.parentFrame = page.frameLocator('iframe[name="frame1"]').locator('text=Parent frame');
         this.childFrame = page.frameLocator('iframe[name="frame2"]').locator('text=Child Iframe');
+
+        //Modal Dialogs Elements
+        this.modalTitle = page.locator('text=Modal Dialogs');
+        this.smallModal = page.locator('#showSmallModal');
+        this.largeModal = page.locator('#showLargeModal');
+        this.closeSmallModalButton = page.locator('#closeSmallModal');
+        this.closeLargeModalButton = page.locator('#closeLargeModal');
     }
 
     goto() {
