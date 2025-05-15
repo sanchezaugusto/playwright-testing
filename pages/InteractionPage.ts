@@ -36,6 +36,17 @@ export class InteractionPage {
     readonly element3: Locator;
     readonly element4: Locator;
 
+    readonly grid2: Locator;
+    readonly oneGrid2: Locator;
+    readonly twoGrid2: Locator;
+    readonly threeGrid2: Locator;
+    readonly fourGrid2: Locator;
+    readonly fiveGrid2: Locator;
+    readonly sixGrid2: Locator;
+    readonly sevenGrid2: Locator;
+    readonly eightGrid2: Locator;
+    readonly nineGrid2: Locator;
+
 
     //Draggable Elements
     //Options
@@ -95,6 +106,17 @@ export class InteractionPage {
         this.element2 = page.locator('#selectableList li:nth-child(2)');
         this.element3 = page.locator('#selectableList li:nth-child(3)');
         this.element4 = page.locator('#selectableList li:nth-child(4)');
+
+        this.grid2 = page.locator('#selectableGrid');
+        this.oneGrid2 = page.locator('#selectableGrid li:nth-child(1)');
+        this.twoGrid2 = page.locator('#selectableGrid li:nth-child(2)');
+        this.threeGrid2 = page.locator('#selectableGrid li:nth-child(3)');
+        this.fourGrid2 = page.locator('#selectableGrid li:nth-child(4)');
+        this.fiveGrid2 = page.locator('#selectableGrid li:nth-child(5)');
+        this.sixGrid2 = page.locator('#selectableGrid li:nth-child(6)');
+        this.sevenGrid2 = page.locator('#selectableGrid li:nth-child(7)');
+        this.eightGrid2 = page.locator('#selectableGrid li:nth-child(8)');
+        this.nineGrid2 = page.locator('#selectableGrid li:nth-child(9)');
 
         //Draggable Elements
         //Options
