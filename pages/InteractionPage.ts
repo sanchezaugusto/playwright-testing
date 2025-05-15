@@ -19,6 +19,15 @@ export class InteractionPage {
     readonly sixList: Locator;
     
     readonly grid: Locator;
+    readonly oneGrid: Locator;
+    readonly twoGrid: Locator;
+    readonly threeGrid: Locator;
+    readonly fourGrid: Locator;
+    readonly fiveGrid: Locator;
+    readonly sixGrid: Locator;
+    readonly sevenGrid: Locator;
+    readonly eightGrid: Locator;
+    readonly nineGrid: Locator;
     
 
     //Draggable Elements
@@ -52,6 +61,27 @@ export class InteractionPage {
         this.ResizableOption = page.locator('text=Resizable');
         this.droppableOption = page.locator('text=Droppable');
         this.dragableOption = page.locator('text=Dragabble');
+
+        //Sortable Elements
+        this.list = page.locator('#sortableList');
+        this.oneList = page.locator('#sortableList li:nth-child(1)');
+        this.twoList = page.locator('#sortableList li:nth-child(2)');
+        this.threeList = page.locator('#sortableList li:nth-child(3)');
+        this.fourList = page.locator('#sortableList li:nth-child(4)');
+        this.fiveList = page.locator('#sortableList li:nth-child(5)');
+        this.sixList = page.locator('#sortableList li:nth-child(6)');
+
+        this.grid = page.locator('#sortableGrid');
+        this.oneGrid = page.locator('#sortableGrid li:nth-child(1)');
+        this.twoGrid = page.locator('#sortableGrid li:nth-child(2)');
+        this.threeGrid = page.locator('#sortableGrid li:nth-child(3)');
+        this.fourGrid = page.locator('#sortableGrid li:nth-child(4)');
+        this.fiveGrid = page.locator('#sortableGrid li:nth-child(5)');
+        this.sixGrid = page.locator('#sortableGrid li:nth-child(6)');
+        this.sevenGrid = page.locator('#sortableGrid li:nth-child(7)');
+        this.eightGrid = page.locator('#sortableGrid li:nth-child(8)');
+        this.nineGrid = page.locator('#sortableGrid li:nth-child(9)');
+        
 
         //Draggable Elements
         //Options
