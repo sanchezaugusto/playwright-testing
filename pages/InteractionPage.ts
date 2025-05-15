@@ -10,7 +10,7 @@ export class InteractionPage {
     readonly dragableOption: Locator;
 
     //Sortable Elements
-    readonly list: Locator;
+    readonly list1: Locator;
     readonly oneList: Locator;
     readonly twoList: Locator;
     readonly threeList: Locator;
@@ -18,7 +18,7 @@ export class InteractionPage {
     readonly fiveList: Locator;
     readonly sixList: Locator;
     
-    readonly grid: Locator;
+    readonly grid1: Locator;
     readonly oneGrid: Locator;
     readonly twoGrid: Locator;
     readonly threeGrid: Locator;
@@ -29,6 +29,13 @@ export class InteractionPage {
     readonly eightGrid: Locator;
     readonly nineGrid: Locator;
     
+    //Selectable Elements
+    readonly list2: Locator;
+    readonly element1: Locator;
+    readonly element2: Locator;
+    readonly element3: Locator;
+    readonly element4: Locator;
+
 
     //Draggable Elements
     //Options
@@ -45,8 +52,8 @@ export class InteractionPage {
     readonly dragBoxY: Locator;
 
     //Container Restricted
-    readonly element1: Locator;
-    readonly element2: Locator;
+    readonly elementD1: Locator;
+    readonly elementD2: Locator;
     readonly containerWrapper: Locator;
 
     //Cursor Style
@@ -63,7 +70,7 @@ export class InteractionPage {
         this.dragableOption = page.locator('text=Dragabble');
 
         //Sortable Elements
-        this.list = page.locator('#sortableList');
+        this.list1 = page.locator('#sortableList');
         this.oneList = page.locator('#sortableList li:nth-child(1)');
         this.twoList = page.locator('#sortableList li:nth-child(2)');
         this.threeList = page.locator('#sortableList li:nth-child(3)');
@@ -71,7 +78,7 @@ export class InteractionPage {
         this.fiveList = page.locator('#sortableList li:nth-child(5)');
         this.sixList = page.locator('#sortableList li:nth-child(6)');
 
-        this.grid = page.locator('#sortableGrid');
+        this.grid1 = page.locator('#sortableGrid');
         this.oneGrid = page.locator('#sortableGrid li:nth-child(1)');
         this.twoGrid = page.locator('#sortableGrid li:nth-child(2)');
         this.threeGrid = page.locator('#sortableGrid li:nth-child(3)');
@@ -82,6 +89,12 @@ export class InteractionPage {
         this.eightGrid = page.locator('#sortableGrid li:nth-child(8)');
         this.nineGrid = page.locator('#sortableGrid li:nth-child(9)');
         
+        //Selectable Elements
+        this.list2 = page.locator('#selectableList');
+        this.element1 = page.locator('#selectableList li:nth-child(1)');
+        this.element2 = page.locator('#selectableList li:nth-child(2)');
+        this.element3 = page.locator('#selectableList li:nth-child(3)');
+        this.element4 = page.locator('#selectableList li:nth-child(4)');
 
         //Draggable Elements
         //Options
@@ -98,8 +111,8 @@ export class InteractionPage {
         this.dragBoxY = page.locator('#restrictedY');
 
         //Container Restricted
-        this.element1 = page.locator("text=I'm contained within the box");
-        this.element2 = page.locator("text=I'm contained within my parent");
+        this.elementD1 = page.locator("text=I'm contained within the box");
+        this.elementD2 = page.locator("text=I'm contained within my parent");
         this.containerWrapper = page.locator('#containmentWrapper');
 
 
