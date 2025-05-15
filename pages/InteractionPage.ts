@@ -9,6 +9,18 @@ export class InteractionPage {
     readonly droppableOption: Locator;
     readonly dragableOption: Locator;
 
+    //Sortable Elements
+    readonly list: Locator;
+    readonly oneList: Locator;
+    readonly twoList: Locator;
+    readonly threeList: Locator;
+    readonly fourList: Locator;
+    readonly fiveList: Locator;
+    readonly sixList: Locator;
+    
+    readonly grid: Locator;
+    
+
     //Draggable Elements
     //Options
     readonly simpleOption: Locator;
