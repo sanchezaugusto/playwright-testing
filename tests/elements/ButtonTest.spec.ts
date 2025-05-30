@@ -1,5 +1,5 @@
 import {test,expect} from '@playwright/test'
-import { ElementPage } from '../../pages/elementPage';
+import { ElementPage } from '../../pages/ElementPage';
 
 test.describe('buttons test', async () => {
     let elementPage: ElementPage;
